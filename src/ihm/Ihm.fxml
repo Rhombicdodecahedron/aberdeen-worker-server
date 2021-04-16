@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1280.0" stylesheets="@../resources/css/style.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ihm.Ihm">
+    <top>
+        <HBox BorderPane.alignment="CENTER">
+            <children>
+                <GridPane prefHeight="81.0" prefWidth="1260.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES"/>
+                        <RowConstraints maxHeight="94.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                    <children>
+                        <GridPane prefHeight="30.0" prefWidth="152.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="670.0" minWidth="10.0"
+                                                   prefWidth="642.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="639.0" minWidth="10.0"
+                                                   prefWidth="638.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <ImageView fitHeight="61.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true"
+                                           GridPane.halignment="CENTER">
+                                    <image>
+                                        <Image url="@./resources/crusader-logo.png"/>
+                                    </image>
+                                    <GridPane.margin>
+                                        <Insets right="30.0"/>
+                                    </GridPane.margin>
+                                </ImageView>
+                                <Label text="Aberdeen" textFill="WHITE" GridPane.halignment="LEFT">
+                                    <font>
+                                        <Font name="System Bold" size="33.0"/>
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets left="30.0"/>
+                                    </GridPane.margin>
+                                </Label>
+                                <Button mnemonicParsing="false" onAction="#actionDeconnexionUtilisateur"
+                                        text="Déconnexion" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+                                    <GridPane.margin>
+                                        <Insets right="50.0"/>
+                                    </GridPane.margin>
+                                </Button>
+                                <Label fx:id="txt_connected_user" text="Utilisateur" GridPane.columnIndex="1"
+                                       GridPane.halignment="CENTER">
+                                    <GridPane.margin>
+                                        <Insets left="200.0"/>
+                                    </GridPane.margin>
+                                </Label>
+                            </children>
+                        </GridPane>
+                        <Separator prefWidth="200.0" GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <GridPane prefHeight="643.0" prefWidth="1101.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="439.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="316.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="316.0" minHeight="10.0" prefHeight="218.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="fluxVideo" fitHeight="355.0" fitWidth="825.0" pickOnBounds="true" preserveRatio="true"
+                           GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets left="50.0" right="50.0"/>
+                    </GridPane.margin>
+                </ImageView>
+                <TextArea fx:id="logs" editable="false" prefHeight="171.0" prefWidth="907.0" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0"/>
+                    </GridPane.margin>
+                </TextArea>
+                <Label fx:id="disconnected_robot" text="Robot déconnecté" visible="false" GridPane.halignment="CENTER">
+                    <GridPane.margin>
+                        <Insets/>
+                    </GridPane.margin>
+                    <font>
+                        <Font name="System Bold" size="29.0"/>
+                    </font>
+                </Label>
+                <Separator prefWidth="200.0" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="100.0" right="100.0"/>
+                    </GridPane.margin>
+                </Separator>
+            </children>
+        </GridPane>
+    </center>
+    <right>
+        <GridPane prefHeight="643.0" prefWidth="293.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="URSA-Klescher"/>
+                <Button fx:id="robot_on" mnemonicParsing="false" onAction="#actionAllumerRobot" text="Démarrage"
+                        GridPane.rowIndex="1"/>
+                <Button fx:id="robot_off" mnemonicParsing="false" onAction="#actionEteindreRobot" text="Arrêt"
+                        GridPane.rowIndex="2"/>
+                <Button mnemonicParsing="false" onAction="#actionTestConnexionDB" text="Test connexion"
+                        GridPane.rowIndex="9"/>
+                <Label text="Serveur" GridPane.rowIndex="4"/>
+                <Button fx:id="server_off" mnemonicParsing="false" onAction="#actionArretServeur" text="Arrêt"
+                        GridPane.rowIndex="6"/>
+                <Button fx:id="server_on" mnemonicParsing="false" onAction="#actionDemarrageServeur" text="Démarrage"
+                        GridPane.rowIndex="5"/>
+                <Separator prefWidth="200.0" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="100.0" right="100.0"/>
+                    </GridPane.margin>
+                </Separator>
+                <Separator prefWidth="200.0" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                        <Insets left="100.0" right="100.0"/>
+                    </GridPane.margin>
+                </Separator>
+                <Button mnemonicParsing="false" onAction="#actionUsers" text="Utilisateurs" GridPane.halignment="CENTER"
+                        GridPane.rowIndex="11"/>
+                <Label text="Base de données" GridPane.rowIndex="8"/>
+                <Separator prefWidth="200.0" GridPane.rowIndex="10">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <GridPane.margin>
+                        <Insets left="100.0" right="100.0"/>
+                    </GridPane.margin>
+                </Separator>
+                <Separator prefWidth="200.0" GridPane.rowIndex="12">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <GridPane.margin>
+                        <Insets left="100.0" right="100.0"/>
+                    </GridPane.margin>
+                </Separator>
+                <GridPane GridPane.rowIndex="13">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <children>
+                        <Label text="\@Ip Serveur : " GridPane.halignment="RIGHT">
+                            <GridPane.margin>
+                                <Insets right="40.0"/>
+                            </GridPane.margin>
+                        </Label>
+                        <Label fx:id="ip_serveur" text="0.0.0.0" GridPane.columnIndex="1"/>
+                    </children>
+                    <rowConstraints>
+                        <RowConstraints/>
+                    </rowConstraints>
+                </GridPane>
+                <GridPane GridPane.rowIndex="14">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <children>
+                        <Label fx:id="port_serveur" text="0" GridPane.columnIndex="1"/>
+                        <Label text="Port : " GridPane.halignment="RIGHT">
+                            <padding>
+                                <Insets right="40.0"/>
+                            </padding>
+                        </Label>
+                    </children>
+                    <rowConstraints>
+                        <RowConstraints/>
+                    </rowConstraints>
+                </GridPane>
+            </children>
+        </GridPane>
+    </right>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</BorderPane>
