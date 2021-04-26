@@ -95,7 +95,7 @@ public class WrkServer extends Thread implements Constante {
      * informations de son socket tout en donnant l'instance du worker
      * principale et de WrkServeur. En cas d'erreur, une message est envoyé
      * sinon un message de connexion informant qu'un client est connecté est
-     * alors envoyé.
+     * alors envoyé. Bite
      */
     @Override
     public void run() {
